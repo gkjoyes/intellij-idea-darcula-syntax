@@ -46,3 +46,16 @@
         }
     }
 }
+
+.syntax--keyword {
+    color: @orange;
+    font-weight: bold;
+
+    &.syntax--operator {
+        color: @foreground;
+    }
+
+    &.syntax--other.syntax--unit {
+        color: @light-orange;
+    }
+}
