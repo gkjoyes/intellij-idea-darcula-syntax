@@ -23,3 +23,26 @@
         color: @blue;
     }
 }
+
+.syntax--entity {
+    &.syntax--punctuation {
+        color: @foreground;
+    }
+
+    &.syntax--name.syntax--class,
+    &.syntax--name.syntax--type.syntax--class {
+        color: @light-orange;
+    }
+
+    &.syntax--name.syntax--tag {
+        color: @light-orange;
+    }
+
+    &.syntax--other.syntax--attribute-name {
+        color: @foreground;
+
+        &.syntax--id {
+            color: @light-orange;
+        }
+    }
+}
