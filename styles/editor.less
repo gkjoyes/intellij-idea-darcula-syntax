@@ -1,34 +1,34 @@
 @import "syntax-variables";
 
 atom-text-editor {
-    background-color: @syntax-background-color;
-    color: @syntax-text-color;
+    background-color: @background;
+    color: @foreground;
 
     .gutter {
-        background-color: @@syntax-gutter-background-color;
-        color: @syntax-gutter-text-color;
+        background-color: @gutter-bg;
+        color: @gutter-fg;
 
         .line-number.cursor-line {
-            background-color: @syntax-background-color;
-            color: @syntax-gutter-text-color-selected;
+            background-color: @background;
+            color: @gutter-selected-fg;
         }
 
         .line-number.cursor-line-no-selection {
-            background: @syntax-background-color;
-            color: @syntax-gutter-text-color-selected;
+            background: @background;
+            color: @gutter-selected-fg;
         }
     }
 
     .wrap-guide {
-        background-color: @syntax-indent-guide-color;
+        background-color: @gray;
     }
 
     .indent-guide {
-        color: @syntax-indent-guide-color;
+        color: @gray;
     }
 
     .invisible-character {
-        color: @syntax-invisible-character-color;
+        color: @invisible-character-color;
     }
 }
 
@@ -38,11 +38,10 @@ atom-text-editor.is-focused  {
     }
 
     .selection .region {
-        background-color: @syntax-selection-color;
+        background-color: @selection-fg;
     }
 
     .line-number.cursor-line-no-selection, .line.cursor-line{
         background-color: #232323;
-        box-shadow: inset 0 1px 1px -1px rgba(0,0,0,0.5), inset 0 -1px 1px -1px rgba(0,0,0,0.5);
     }
 }
