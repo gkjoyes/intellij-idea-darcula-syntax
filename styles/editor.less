@@ -3,4 +3,19 @@
 atom-text-editor {
     background-color: @syntax-background-color;
     color: @syntax-text-color;
+
+    .gutter {
+        background-color: @@syntax-gutter-background-color;
+        color: @syntax-gutter-text-color;
+
+        .line-number.cursor-line {
+            background-color: @syntax-background-color;
+            color: @syntax-gutter-text-color-selected;
+        }
+
+        .line-number.cursor-line-no-selection {
+            background: @syntax-background-color;
+            color: @syntax-gutter-text-color-selected;
+        }
+    }
 }
