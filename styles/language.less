@@ -59,3 +59,25 @@
         color: @light-orange;
     }
 }
+
+.syntax--storage {
+    color: @orange;
+}
+
+.syntax--support {
+    &.syntax--class {
+        color: @light-orange;
+    }
+
+    &.syntax--function {
+        color: @light-orange;
+
+        &.syntax--any-method {
+            color: @blue;
+        }
+    }
+}
+
+.syntax--variable {
+    color: @purple;
+}
