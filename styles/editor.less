@@ -26,6 +26,10 @@ atom-text-editor {
     .indent-guide {
         color: @gray;
     }
+
+    .invisible-character {
+        color: @gutter-bg;
+    }
 }
 
 atom-text-editor.is-focused  {
@@ -40,4 +44,10 @@ atom-text-editor.is-focused  {
     .line-number.cursor-line-no-selection, .line.cursor-line{
         background-color: #232323;
     }
+}
+
+.bracket-matcher .region {
+    position: absolute;
+    border: 0 !important;
+    background-color: lighten(@background, 30%);
 }
