@@ -2,20 +2,20 @@
 
 atom-text-editor {
     background-color: @background;
-    color: @foreground;
+    color           : @foreground;
 
     .gutter {
         background-color: @gutter-bg;
-        color: @gutter-fg;
+        color           : @gutter-fg;
 
         .line-number.cursor-line {
             background-color: @background;
-            color: @gutter-selected-fg;
+            color           : @gutter-selected-fg;
         }
 
         .line-number.cursor-line-no-selection {
             background: @background;
-            color: @gutter-selected-fg;
+            color     : @gutter-selected-fg;
         }
     }
 
@@ -48,8 +48,8 @@ atom-text-editor.is-focused {
 }
 
 .bracket-matcher .region {
-    position: absolute;
-    border: 0 !important;
+    position        : absolute;
+    border          : 0 !important;
     background-color: lighten(@background, 30%);
 }
 
@@ -59,10 +59,10 @@ atom-text-editor.is-focused {
             color: @comment;
         }
 
-        &.syntax--string,
-        &.syntax--variable,
+        &.syntax--array,
         &.syntax--parameters,
-        &.syntax--array {
+        &.syntax--string,
+        &.syntax--variable {
             color: @foreground;
         }
 
