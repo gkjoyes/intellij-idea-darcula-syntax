@@ -26,7 +26,7 @@
 
 .syntax--entity {
     &.syntax--punctuation {
-        color: @foreground;
+        color: @light-orange;
     }
 
     &.syntax--name.syntax--class,
@@ -39,7 +39,7 @@
     }
 
     &.syntax--other.syntax--attribute-name {
-        color: @foreground;
+        color: @light-orange;
 
         &.syntax--id {
             color: @light-orange;
@@ -50,18 +50,25 @@
 .syntax--keyword {
     color      : @orange;
     font-weight: bold;
+}
 
-    &.syntax--operator {
-        color: @foreground;
+.syntax--source.syntax--js {
+    .syntax--keyword.syntax--operator.syntax--new {
+        color: @orange;
     }
 
-    &.syntax--other.syntax--unit {
+    .syntax--keyword.syntax--operator {
+        color: #BBB;
+    }
+
+    .syntax--entity.syntax--name.syntax--function {
         color: @light-orange;
     }
 }
 
 .syntax--storage {
-    color: @orange;
+    color      : @orange;
+    font-weight: bold;
 }
 
 .syntax--support {
@@ -79,7 +86,7 @@
 }
 
 .syntax--variable {
-    color: @purple;
+    color: @foreground;
 }
 
 .syntax--invalid.syntax--illegal {
