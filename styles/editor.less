@@ -1,23 +1,9 @@
 @import "syntax-variables";
 
+
 atom-text-editor {
     background-color: @background;
-    color           : @foreground;
-
-    .gutter {
-        background-color: @gutter-bg;
-        color           : @gutter-fg;
-
-        .line-number.cursor-line {
-            background-color: @background;
-            color           : @gutter-selected-fg;
-        }
-
-        .line-number.cursor-line-no-selection {
-            background: @background;
-            color     : @gutter-selected-fg;
-        }
-    }
+    color: @foreground;
 
     .wrap-guide {
         background-color: @gray;
@@ -29,6 +15,70 @@ atom-text-editor {
 
     .invisible-character {
         color: @gutter-bg;
+    }
+
+    .cursor-line {
+        background-color: @background;
+        color: @gutter-selected-fg;
+    }
+
+    .gutter {
+        background-color: @background;
+        color: @gutter-fg;
+
+        .line-number {
+            .cursor-line {
+                background-color: @background;
+                color: @gutter-selected-fg;
+            }
+
+            .cursor-line-no-selection {
+                background: @background;
+                color: @gutter-selected-fg;
+            }
+        }
+    }
+
+    .fold-marker:after,
+    .gutter .line-number.folded,
+    .gutter .line-number:after {
+        color: white;
+        font-weight: bold;
+    }
+
+}
+
+.syntax--keyword {
+    color: @purple;
+
+    &.syntax--control {
+        &.syntax--statement {
+            color: @orange;
+            font-weight: bold;
+        }
+
+        &.syntax--elements {
+            color: @light-gray;
+        }
+    }
+
+    &.syntax--operator {
+        &.syntax--comparison {
+            color: @purple;
+        }
+
+        &.syntax--logical {
+            font-weight: bold;
+            color: @orange;
+        }
+    }
+
+    &.syntax--other.syntax--special-method {
+        color: @blue;
+    }
+
+    &.syntax--other.syntax--unit {
+        color: @orange;
     }
 }
 
@@ -48,8 +98,8 @@ atom-text-editor.is-focused {
 }
 
 .bracket-matcher .region {
-    position        : absolute;
-    border          : 0 !important;
+    position: absolute;
+    border: 0 !important;
     background-color: lighten(@background, 30%);
 }
 

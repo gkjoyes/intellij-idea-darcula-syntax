@@ -38,6 +38,10 @@
         color: @light-orange;
     }
 
+    &.syntax--name.syntax--function {
+        color: @light-orange;
+    }
+
     &.syntax--other.syntax--attribute-name {
         color: @light-orange;
 
@@ -47,42 +51,15 @@
     }
 }
 
-.syntax--keyword {
-    color      : @orange;
-    font-weight: bold;
-}
-
-.syntax--source.syntax--js {
-    .syntax--keyword.syntax--operator.syntax--new {
-        color: @orange;
-    }
-
-    .syntax--keyword.syntax--operator {
-        color: #BBB;
-    }
-
-    .syntax--entity.syntax--name.syntax--function {
+.syntax--support {
+    &.syntax--function.syntax--builtin {
         color: @light-orange;
     }
 }
 
 .syntax--storage {
-    color      : @orange;
+    color: @orange;
     font-weight: bold;
-}
-
-.syntax--support {
-    &.syntax--class {
-        color: @light-orange;
-    }
-
-    &.syntax--function {
-        color: @light-orange;
-
-        &.syntax--any-method {
-            color: @blue;
-        }
-    }
 }
 
 .syntax--variable {
@@ -91,7 +68,7 @@
 
 .syntax--invalid.syntax--illegal {
     background-color: @red;
-    color           : @foreground;
+    color: @foreground;
 }
 
 .syntax--none {
@@ -100,7 +77,7 @@
 
 .syntax--markup {
     &.syntax--bold {
-        color      : @orange;
+        color: @orange;
         font-weight: bold;
     }
 
@@ -113,7 +90,7 @@
     }
 
     &.syntax--italic {
-        color     : @purple;
+        color: @purple;
         font-style: italic;
     }
 
