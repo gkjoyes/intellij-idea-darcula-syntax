@@ -114,6 +114,11 @@ atom-text-editor.is-focused {
         &.syntax--string,
         &.syntax--variable {
             color: @foreground;
+
+            &.syntax--end,
+            &.syntax--begin {
+                color: @green;
+            }
         }
 
         &.syntax--heading,
